@@ -1,0 +1,97 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --main-color: black;
+    --hover-color: #f1f1f1;
+    --shadow-color: rgba(128, 128, 128, 0.5);
+}
+
+/* Grid */
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: footer; }
+
+/* Para pantallas de 768px o más */
+@media (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header header header header header header"
+            "main main main main main main"
+            "footer footer footer footer footer footer";
+    }
+}
+
+/* Para pantallas de menos de 768px */
+@media (max-width: 767px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "main"
+            "menu"
+            "footer"
+            "right";
+    }
+}
+
+/* Header Styles */
+.item1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item1 a {
+    margin: 0px 20px;
+    padding: 40px 55px;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 24px;
+    white-space: nowrap;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.item1 a:hover {
+    background-color: transparent;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 15px 5px rgba(128, 128, 128, 0.5);
+}
+
+.imagen{
+    width: 80px;
+    margin: 0px 80px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.imagen-centrada {
+    object-fit: contain;
+}
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.item3{
+    width: 1000%;
+    clear: both;
+    padding: 60px;
+    background-color: aquamarine;
+}
+
