@@ -130,3 +130,26 @@ footer p {
     top: 0;
     width: 100%;
 }
+
+.product-title {
+    font-size: 1rem; /* Ajusta este valor según sea necesario */
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-price {
+    font-size: 0.9rem; /* Ajusta este valor según sea necesario */
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+
+.product-image {
+    max-width: 100%; /* Ajusta este valor según sea necesario */
+    height: auto; /* Mantener la proporción de aspecto */
+    max-height: 120px; /* Limitar la altura máxima */
+    object-fit: contain; /* Ajustar la imagen dentro del contenedor */
+}

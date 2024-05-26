@@ -11,17 +11,21 @@ export default {
             <h4 class ="contact-info">Menú</h4>
             <br>
             <li class = "footer-menu-item">
-                <a href="#">Inicio</a>
+                <a href="index.html">Inicio</a>
             </li>
             <li class = "footer-menu-item">
-                <a href="#">Quiénes somos</a>
+                <a href="quienesSomos.html">Quiénes somos</a>
             </li>
             <li class = "footer-menu-item">
-                <a href="#">Primavera/Verano</a>
+                <a href="coleccion-hombres.html">Coleccion Hombres</a>
             </li>
             
             <li class = "footer-menu-item">
-                <a href="#">Otoño/Invierno</a>
+                <a href="coleccion-mujeres.html">Coleccion Mujeres</a>
+            </li>
+            
+            <li class = "footer-menu-item">
+                <a href="contacto.html">Contacto</a>
             </li>
 
         </ul>

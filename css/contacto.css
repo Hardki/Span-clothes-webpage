@@ -1,0 +1,68 @@
+
+header{
+  
+  background-color: black;
+
+}
+
+
+h1 {
+    color:white;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    font-size: 200%;
+  }
+  #menu-icon {
+    width: 50px; /* Cambia esto al tamaño que quieras */
+    height: 50px; /* Cambia esto al tamaño que quieras */
+    float: right;
+}
+
+  main{
+    text-align: center; 
+
+  }
+
+ 
+
+
+#Mapa {
+  margin-top: 10px;
+  margin-right: 20px;
+ text-align: right;
+
+}
+
+main #Mapa h2{
+  text-align: right;
+  margin-right: 30px;
+}
+
+#Pie #Nav-Pie{
+  background-color: black;
+  font-family:"Sofia Sans Condensed", sans-serif;
+  font-size: 130%;
+  width: 1400px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 20px auto 20px auto;
+}
+#Pie #Nav-Pie a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  float: left;
+}
+
+#Pie #Derechos-Pie{
+  background-color: black;
+  
+  margin:20px auto 20px auto ;
+  text-align: center;
+  
+  color: white;
+}
+
