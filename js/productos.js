@@ -1,11 +1,11 @@
 // En el archivo productos.js
-export async function fetchData(url) {
+export async function obtenerDatos(url) {
   try {
     const response = await fetch(url);
-    const data = await response.json();
-    return data;
+    const datos = await response.json();
+    return datos;
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error recibiendo datos:', error);
     throw error;
   }
 }

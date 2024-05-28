@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Coleccion Hombres</title>
+    <meta charset="utf-8"> <!--Define la codificación de caracteres-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Compatibilidad con Explorer-->
+    <title>Colección Hombres</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Define la escala de la página-->
+
+    <!--Define estilos, uso de iconos, fuentes, Boostrap para estilos responsive-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,24 +16,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="./images/yoda.png"/>
 </head>
+
 <body>
     <div id="app">
-        <my-header></my-header>
+        <mi-header></mi-header>
         <main>
             <br>
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <br><br>
-                    <div class="col" v-for="product in images" :key="product.id">
+                    <div class="col" v-for="producto in imagenes" :key="producto.id">
                         <br><br>
-                        <div class="cards shadow-sm">
-                            <img v-if="product.image" :src="product.image" class="card-img-top product-image" alt="...">
-                            <div class="cards-body">
-                                <h5 class="cards-title product-title">{{ product.title }}</h5>
-                                <p class="cards-text product-price">{{ product.price }}</p>
+                        <div class="tarjeta shadow-sm">
+                            <img v-if="producto.image" :src="producto.image" class="card-img-top imagen-tarjeta" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">{{ producto.title }}</h5>
+                                <p class="card-text product-price">${{ producto.price }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-success">Agregar</a>
+                                    <a href="#" class="btn btn-success boton-agregar">Agregar</a>
                                 </div>
                             </div>
                         </div>
@@ -39,42 +43,43 @@
                 </div>
             </div>
         </main>
+        <mi-footer></mi-footer>
     </div>
     
-    
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script type="module">
         import Header from './js/header.js';
-        import { fetchData } from './js/productos.js';
+        import Footer from './js/footer.js';
+        import { obtenerDatos } from './js/productos.js';
         import { stickyfunction } from './js/sticky.js';
 
+        //Declaracion de la nueva instancia de Vue.js
         new Vue({
-            el: '#app',
+            el: '#app', //Le asigna al id app todo el contenido del DOM
             components: {
-                'my-header': Header,
+                'mi-header': Header,
+                'mi-footer': Footer,
             },
             data() {
-                return {
-                    images: [],
+                return { //Declaracion de variables a utilizar
+                    imagenes: [],
                 };
             },
-            methods: {
+            methods: {  //Declaracion de funciones a utilizar
                 async fetchImages() {
                     try {
-                        
-                        const menData = await fetchData('https://fakestoreapi.com/products/category/men\'s clothing');
-                        this.images = [...menData];
+                        const hombresDatos = await obtenerDatos("https://fakestoreapi.com/products/category/men's clothing");
+                        this.imagenes = [...hombresDatos];
                     } catch (error) {
-                        console.error('Error fetching images:', error);
+                        console.error('Error buscando imágenes:', error);
                     }
                 },
             },
-            created() {
+            created() { //Declara las funciones que se ejecutan automaticamente al crear la pagina
                 this.fetchImages();
             },
-            mounted() {
+            mounted() { //Declaracion de las funciones a ejecutar al montar y tener toda la pagina lista
                 stickyfunction();
             },
         });

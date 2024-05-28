@@ -150,6 +150,36 @@ footer p {
 .product-image {
     max-width: 100%; /* Ajusta este valor según sea necesario */
     height: auto; /* Mantener la proporción de aspecto */
-    max-height: 120px; /* Limitar la altura máxima */
+    max-height: 60px; /* Limitar la altura máxima */
     object-fit: contain; /* Ajustar la imagen dentro del contenedor */
+}
+
+.tarjeta {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-tarjeta {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-height: 200px; /* Establece una altura máxima para las imágenes */
+    width: auto; /* Mantiene la proporción de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover .imagen-tarjeta {
+    transform: scale(1.1);
+}
+
+.boton-agregar {
+    transition: background-color 0.3s;
+}
+
+.boton-agregar:hover {
+    background-color: #28a745;
 }

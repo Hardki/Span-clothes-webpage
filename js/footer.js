@@ -39,11 +39,13 @@ export default {
             <p class ="contact-info">Av. Rivadavia 1234</p><br>
         </div>
         <div class="footer-section">
-            <h4 class = "contact-info">Encontrános en</h4><br>
-            <i class="fa-brands fa-facebook" style="font-size: 18px; color: #4267B2;"> Facebook</i>
-            <i class="fa-brands fa-youtube" style="font-size: 18px; color: #FF0000;"> Youtube</i>
-            <i class="fa-brands fa-whatsapp" style="font-size: 18px; color: rgb(150, 205, 94);"> WhatsApp</i>
-            <i class="fa-brands fa-github" style="font-size: 18px; color: #ffffff;"> GitHub</i>
+
+            <h4 class="contact-info">Encontrános en</h4><br>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook" style="font-size: 18px; color: #4267B2;"> Facebook</i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube" style="font-size: 18px; color: #FF0000;"> Youtube</i></a>
+            <a href="https://api.whatsapp.com/"><i class="fa-brands fa-whatsapp" style="font-size: 18px; color: rgb(150, 205, 94);"> WhatsApp</i></a>
+            <a href="https://github.com/"><i class="fa-brands fa-github" style="font-size: 18px; color: #ffffff;"> GitHub</i></a>
+        
         </div>
     </footer>
 `,

@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto Span</title>
-    <link href="css/contacto.css" rel="stylesheet" type="text/css">
+    <link href="./css/contacto.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpg" href="./images/yoda.png"/>
+
+
+
 
 
 </head>
@@ -32,12 +36,12 @@
             </div>
         <h2>Contacto</h2>
         <h3>Completa todos los datos y nos pondremos en contacto con vos </h3>
-        <form action="">
-            <Label form="nombre">Nombre  :</Label>
+        <form action="./show-data.html" target="_blank">
+            <label form="nombre">Nombre  :</label>
             <Input type="text" name="nombre" id="nombre">
                 <br><br>
 
-            <Label form="apellido">Apellido:</Label>
+            <label form="apellido">Apellido:</label>
             <Input type="text" name="apellido" id="apellido">
             <br><br>
 
@@ -45,21 +49,31 @@
 
             
 
-            <Label form="telefono">Telefono:</Label>
+            <label form="telefono">Telefono:</label>
             <Input type="number" name="telefono" id="telefono">
             <br><br>
 
-           <Label form="email">Email :</Label>
+           <label form="email">E - Mail :</label>
            <input type="email" name="email" id="email">
             <br><br>
 
-            <textarea name="message" rows="10" cols="30">Escribe tu Mensaje:</textarea>
-            <br><br>
+            <label for="comentarios">Comentarios: </label>
+            <br>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+            <br>
+
+           
 
             <label><input type="checkbox" id="cbox1" value="first_checkbox" /> Acepto recibir mail como respuesta</label>
-            <br /><br>
+            <br><br>
 
-            <input type="submit" value="Enviar">
+            <input type="submit"  id="button" value="Enviar" >
+            <input type="reset"  id="button" value="Borrar" >
+            
+           
+           
+            <br><br>
+
     
            
        
@@ -76,8 +90,8 @@
         <div id="Nav-Pie">
             <a href="index.html">Inicio</a>
             <a href="quienesSomos.html">Quienes Somos</a>
-            <a href="coleccion-mujeres.html">Coleccion Mujeres</a>
-            <a href="coleccion-hombres.html">Coleccion Hombres</a>
+            <a href="Coleccion-hombres.html">Coleccion Hombres</a>
+            <a href="Coleccion-mujeres.html">Coleccion  Mujeres</a>
             <a href="Contacto.html">Contacto</a>
             <img src="images/yoda.png" alt=""id="menu-icon">
             
